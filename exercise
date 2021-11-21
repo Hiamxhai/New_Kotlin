@@ -126,5 +126,72 @@ fun isLeapYear(year: Int): Boolean {
     return false
 }
 
+exersice 004
+Fibonacci Fn
+
+
+fun main() {
+    println("Nhập số nguyên dương từ 0 - 90")
+    var n: Int = readLine()!!.toInt()
+    if (n >= 0 && n < 90) {
+        var fn = fibonacci(n)
+        println(fn)
+    }else {
+        println("enter 0 < n < 90")
+    }
+}
+fun fibonacci(n: Int): Long {
+    if (n < 2) {
+        return n.toLong()
+    }
+    var f0: Long = 0;
+    var f1: Long = 1;
+    var fn: Long = 0;
+    for (i in 2..n) {
+        fn = f0 + f1
+        f0 = f1
+        f1 = fn
+    }
+    return fn;
+}
+
+// so fibonacci dao tu 0 den 20
+
+fun main() {
+    println("nhap so nguyen duong n trong doan 0 den 20")
+   val n = readLine()!!.toInt()
+    if (n >= 0 && n <= 20) {
+        val result = findFiboNumbers(n)
+        showArrayElements(result)
+    } else {
+        println("vui long nhap dung yeu cau")
+    }
+}
+
+private fun showArrayElements(result: IntArray) {
+    for (i in result.reversed()) {
+        println("$i ")
+    }
+}
+
+fun findFiboNumbers(n: Int): IntArray {
+    val result = IntArray(n+1)
+    var f0 = 0
+    var f1 = 1
+    var fn = 0
+    for (i in 0..n) {
+        if(i < 2) {
+            fn = i
+        }else {
+            fn = f0 + f1
+            f0 = f1
+            f1 = fn
+        }
+        result[i] = fn
+    }
+    return result
+}
+
+
 
 
