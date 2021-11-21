@@ -1,0 +1,130 @@
+// Chuyển số n ở hệ 10 sang 2 và 16 
+//Cach 1
+
+
+
+fun main() {
+    var n = getNFromKeyboard()
+    var binaryResult = convert(n, 2)
+    var hexaResult = convert(n, 16)
+    println(binaryResult)
+    println(hexaResult)
+}
+
+fun getNFromKeyboard(): Int {
+    var n : Int
+    while (true) {
+        println("nhập vào số nguyên dương từ 2 đến 6 chữ số")
+        n = readLine()!!.toInt()
+        if (n > 9 && n <= 999999) {
+            break
+        }
+    }
+    return n
+}
+fun convert(n :Int, base: Int): String {
+    return  n.toString(base).toUpperCase()
+}
+
+Cach 2 : 
+
+fun main() {
+    var n = getNFromKeyboard()
+    var binaryResult = convert(n, 2)
+    var hexaResult = convert(n , 16)
+    println(binaryResult)
+    println(hexaResult)
+}
+private fun covert(n: Int, base: Int):String {
+    val ref: String = "0123456789ABCDEF"
+    var currN = n
+    var result = ""
+    while (currN > 0) {
+        var remainder = currN % base
+        result += ref.get(remainder)
+        currN /= base
+    }
+    return result
+
+}
+
+private fun getNFromKeyboard(): Int {
+    var n : Int
+    while (true) {
+        println("nhập vào số nguyên dương từ 2 đến 6 chữ số")
+        n = readLine()!!.toInt()
+        if (n > 9 && n <= 999999) {
+            break
+        }
+    }
+    return n
+}
+
+Kotlin exercise 2 
+// Nhập n và k từ bàn phím n > k : giá trị lớn nhất nhỏ hơn n chia hết cho k
+
+
+fun main() {
+    var n : Int
+    var k : Int
+    n = getNFromKeyboard()
+    k = getKFromKeyboard(n)
+    var result = (n / k) * k
+    println(result)
+}
+
+private fun getKFromKeyboard(n: Int): Int {
+    var k : Int
+    while (true) {
+        println("Nhập số nguyên dương K nhỏ hơn n")
+        k = readLine()!!.toInt()
+        if (k > 0 && k < n) {
+            break
+        }
+    }
+    return  k
+}
+
+private fun getNFromKeyboard(): Int {
+    var n: Int
+    while (true) {
+        println("Nhập số nguyên dương n")
+        n = readLine()!!.toInt()
+        if(n > 0) {
+            break
+        }
+    }
+    return n;
+}
+
+excersice 3
+//Kiem tra nam nhuan 
+
+fun main() {
+    println("enter year to check")
+    var year = readLine()!!.toInt()
+    var leapYear: Boolean = isLeapYear(year)
+    if (leapYear) {
+        println("Yes")
+    } else {
+        println("No")
+    }
+
+}
+fun isLeapYear(year: Int): Boolean {
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0 ) {
+                return true;
+            } else {
+                false
+            }
+        } else {
+            return true
+        }
+    }
+    return false
+}
+
+
+
