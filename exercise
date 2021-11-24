@@ -192,6 +192,50 @@ fun findFiboNumbers(n: Int): IntArray {
     return result
 }
 
+// giai pt bac 2 
 
+import java.util.*
+
+fun giaiPT(a:Double, b:Double, c:Double):String {
+    if (a == 0.0) {
+        if (b == 0.0 && c == 0.0)
+            return "Vo so nghiem"
+        if (b == 0.0 && c!= 0.0)
+            return "vo nghiem"
+        var x = -c/a
+        return "No " + x
+    }
+    else {
+        var delta = b * b - 4 * a * c
+        if (delta < 0)
+            return "vo nghiem"
+        if (delta == 0.0) {
+            var x = -b/(2*a)
+            return "No kep x1 = x2 = " + x
+        }
+        var x1 = (-b - Math.sqrt(delta)) / (2 * a)
+        var x2 = (-b - Math.sqrt(delta)) /(2 * a)
+        return "x1 = $x1, x2 = $x2"
+    }
+}
+
+fun main(array: Array<String>) {
+    var a:Double?
+    var b:Double?
+    var c:Double?
+    println("nhap he so a : ")
+    a = readLine()?.toDouble()
+    println("nhap he so b : ")
+    b = readLine()?.toDouble()
+    println("nhap he so c : ")
+    c = readLine()?.toDouble()
+   if (a == null || b == null || c == null) return
+
+    var kq = giaiPT(a,b,c)
+    println(kq)
+
+
+
+}
 
 
