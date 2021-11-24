@@ -237,5 +237,31 @@ fun main(array: Array<String>) {
 
 
 }
+// bai tap phep toan 
+fun main() {
+    var a: Double?
+    var b: Double?
+    var pt:Char?
+    println("nhap so a :")
+    a = readLine()?.toDouble()
+    println("nhap b")
+    b = readLine()?.toDouble()
+    println("nhap phep toan + - * % ")
+    pt = readLine()?.get(0)
+    if(a == null || b == null || pt == null)
+        return
+    when(pt) {
+        '+' -> println("$a + $b = ${a + b}")
+        '-' -> println("$a - $b = ${a - b}")
+        '*' -> println("$a * $b = ${a * b}")
+        '/' ->
 
+            if (b == 0.0)
+                println("mau = 0, KHONG CHIA DC")
+                else
+                println("$a / $b = ${a / b}")
+        
+
+    }
+}
 
