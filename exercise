@@ -306,3 +306,21 @@ fun main() {
 //    HinhC(8)
     HinhC(7)
 }
+
+// hinh quat
+fun HinhQuat(h:Int) {
+    for (i in 0.. h - 1) {
+        for (j in 0.. h -1 ) {
+            if(j == h/2 || (i + j == h-1) || (i==0 || j >= h / 2) || (i == h-1 && j <= h / 2)) {
+                print("*")
+            }
+            else
+                print(" ")
+        }
+        println()
+
+    }
+}
+fun main() {
+    HinhQuat(11)
+}
