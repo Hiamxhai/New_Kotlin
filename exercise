@@ -287,3 +287,22 @@ fun main() {
 
 }
 
+// ve hinh day so tang 
+
+fun HinhC(h:Int) {
+    for (i in 0 .. h - 1 ) {
+        for (j in 0 .. h - 1 ) {
+            if(i+j >= h-1)
+                print(" ")
+            else
+                print("*")
+        }
+        println()
+    }
+
+}
+fun main() {
+//    HinhA(8)
+//    HinhC(8)
+    HinhC(7)
+}
