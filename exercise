@@ -345,3 +345,26 @@ fun main() {
         e.printStackTrace()
     }
 }
+
+//ngay thang nam 
+import java.text.SimpleDateFormat
+import java.util.*
+
+fun main() {
+    var sdf=SimpleDateFormat("dd/MM/yyyy")
+    println("nhap ngay thang nam sinh (dd/MM/yyy):")
+    var namsinh = readLine()
+    if (namsinh == null) return
+    var date = sdf.parse(namsinh)
+    var calHienTai = Calendar.getInstance()
+    var yearHienTai = calHienTai.get(Calendar.YEAR)
+    var calNamSinh = Calendar.getInstance()
+    calNamSinh.time =date
+    var yearNamSinh = calNamSinh.get(Calendar.YEAR)
+    var tuoi = yearHienTai - yearNamSinh
+    println("tuoi cua ban = $tuoi")
+
+
+
+}
+
