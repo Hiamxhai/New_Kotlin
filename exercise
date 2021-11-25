@@ -367,4 +367,43 @@ fun main() {
 
 
 }
+//Game ramdom
 
+import java.util.Random
+fun choi() {
+    var rd =Random()
+    var soMay = rd.nextInt(101)
+    var soLanDoan = 0
+//    println("Moi ban doan so")
+    while (true) {
+        println("Mới bạn đoán số ")
+        var soNguoi = readLine()?.toInt()
+        if (soNguoi == null) break
+        soLanDoan++
+        println("Bạn đã đoán lần thứ  $soLanDoan")
+        if (soNguoi == soMay) {
+            println("Chúc mừng bạn thật thông minh và tài giỏi  = $soMay")
+            break
+        }
+         else if (soNguoi > soMay) {
+            println("Bạn đã đoán sai, số của máy < số của bạn")
+        }
+        else if (soNguoi < soMay) {
+            println("Bạn đã đoán sai, số của máy > số của bạn")
+            }
+        if (soLanDoan >= 7) {
+            println("Game over!")
+            break
+        }
+    }
+}
+fun main() {
+    while (true) {
+        choi()
+        println("Choi nua khong ?(C/K):")
+        var kq = readLine()
+        if (kq?.compareTo("k",true) == 0)
+            break
+    }
+    println("Cam on cac ban da choi game")
+}
