@@ -419,4 +419,13 @@ fun main() {
 -Trimstart - xoa truoc
 -Trimend - xoa sau 
 -CompareTo - Sosanh
+-append - noi
+-plus - Noi
+-split - Tach chuoi -   
+var a = "SV001;Vu Son Hai; Hai@gmail.com "
+    var arr = a.split(";")
+    println("So phan tu trong danh sach = $")
+    for (item in arr)
+        println(item)
+
 
