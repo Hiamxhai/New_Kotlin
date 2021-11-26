@@ -407,3 +407,16 @@ fun main() {
     }
     println("Cam on cac ban da choi game")
 }
+
+-length - đo chiều dài chuỗi 
+-indexOf - tìm kiếm kí tự String
+-lastindexOf - Vị trí cuối cùng tìm thấy
+-Contains - Tìm tất cả kí tự có trong chuỗi 
+-Substring(vi tri can lay - vi tri cuoi can lay) - lay tu trai sang
+-Replace - đổi chuỗi
+-ReplaceFirst - Đổi chuỗi đầu tiên 
+-Trim - Xoa khoang trang du thua ben trai va phai
+-Trimstart - xoa truoc
+-Trimend - xoa sau 
+-CompareTo - Sosanh
+
