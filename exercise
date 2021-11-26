@@ -427,5 +427,6 @@ var a = "SV001;Vu Son Hai; Hai@gmail.com "
     println("So phan tu trong danh sach = $")
     for (item in arr)
         println(item)
-
+-ToUpcase 
+-Tolowcase
 
